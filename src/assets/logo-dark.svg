@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" fill="none">
+  <!-- Wordmark: simple geometric logomark + brand name; colors follow dark theme -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7690b8"/>
+      <stop offset="100%" stop-color="#9fb3d1"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon: layered rounded squares forming a subtle "J"/"D" monogram feel -->
+  <g transform="translate(6,6)">
+    <rect x="0" y="0" rx="10" ry="10" width="44" height="44" fill="url(#g)"/>
+    <rect x="8" y="8" rx="8" ry="8" width="28" height="28" fill="#0a0a0a"/>
+    <path d="M16 14h8a6 6 0 1 1 0 12h-6v6h-4v-18z" fill="#7690b8"/>
+  </g>
+  <!-- Brand text -->
+  <g transform="translate(60,12)">
+    <text x="0" y="18" font-family="Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="20" fill="#ffffff" letter-spacing="0.5">
+      JDP
+    </text>
+    <text x="0" y="38" font-family="Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="400" font-size="14" fill="#bfbfbf" letter-spacing="1">
+      FINANCE
+    </text>
+  </g>
+</svg>
+

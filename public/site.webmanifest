@@ -1,0 +1,23 @@
+{
+  "name": "Strawberry Loans - Quick & Easy Personal Loans",
+  "short_name": "Strawberry Loans",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Fast and easy personal loans from $2,001 to $5,000. Quick approval, flexible repayment terms."
+}

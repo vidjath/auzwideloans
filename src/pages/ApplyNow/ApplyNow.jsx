@@ -57,27 +57,19 @@ const ApplyNow = () => {
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    let fieldValue;
-    if (type === "select-one") {
-      const selectedOption = e.target.options[e.target.selectedIndex];
-      fieldValue = selectedOption.text;
-    } else {
-      fieldValue = type === "checkbox" ? checked : value;
-    }
-
     if (name.includes(".")) {
       const [parent, child] = name.split(".");
       setFormData({
         ...formData,
         [parent]: {
           ...formData[parent],
-          [child]: fieldValue,
+          [child]: value,
         },
       });
     } else {
       setFormData({
         ...formData,
-        [name]: fieldValue,
+        [name]: type === "checkbox" ? checked : value,
       });
     }
   };
@@ -85,9 +77,78 @@ const ApplyNow = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Mappings for select labels
+    const mainReasonLabels = {
+      debt_consolidation: "Debt Consolidation",
+      home_improvement: "Home Improvement",
+      major_purchase: "Major Purchase",
+      education: "Education",
+      business: "Business",
+      medical: "Medical Expenses",
+      other: "Other"
+    };
+
+    const citizenshipLabels = {
+      citizen: "Australian Citizen",
+      permanent_resident: "Permanent Resident",
+      temporary_resident: "Temporary Resident",
+      other: "International Student"
+    };
+
+    const incomeSourceLabels = {
+      full_time: "Full-time Employment",
+      part_time: "Part-time Employment",
+      self_employed: "Casual Employment",
+      other: "Other"
+    };
+
+    const maritalStatusLabels = {
+      single: "Single",
+      defacto: "De Facto",
+      married: "Married",
+      separated: "Separated",
+      others: "Others"
+    };
+
+    const creditScoreLabels = {
+      excellent: "Excellent (800+)",
+      very_good: "Very Good (700-799)",
+      good: "Good (650-699)",
+      fair: "Fair (550-649)",
+      poor: "Poor (below 550)",
+      not_sure: "Not Sure"
+    };
+
+    const stateLabels = {
+      NSW: "New South Wales",
+      VIC: "Victoria",
+      QLD: "Queensland",
+      WA: "Western Australia",
+      SA: "South Australia",
+      TAS: "Tasmania",
+      ACT: "Australian Capital Territory",
+      NT: "Northern Territory"
+    };
+
+    const securityLabels = {
+      yes: "Yes",
+      no: "No"
+    };
+
+    // Create submit data with labels
+    const submitData = { ...formData };
+    submitData.mainReason = mainReasonLabels[formData.mainReason] || formData.mainReason;
+    submitData.citizenship = citizenshipLabels[formData.citizenship] || formData.citizenship;
+    submitData.incomeSource = incomeSourceLabels[formData.incomeSource] || formData.incomeSource;
+    submitData.maritalStatus = maritalStatusLabels[formData.maritalStatus] || formData.maritalStatus;
+    submitData.creditScore = creditScoreLabels[formData.creditScore] || formData.creditScore;
+    submitData.address = { ...formData.address };
+    submitData.address.state = stateLabels[formData.address.state] || formData.address.state;
+    submitData.security = securityLabels[formData.security] || formData.security;
+
     try {
       setIsSubmitting(true);
-      await sendApplicationForm(formData);
+      await sendApplicationForm(submitData);
 
       // Reset form or redirect after successful submission
       setTimeout(() => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaUser,
   FaPhoneAlt,
@@ -48,6 +48,7 @@ const ApplyNow = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Show warning modal when component mounts
   useEffect(() => {
@@ -149,10 +150,43 @@ const ApplyNow = () => {
     try {
       setIsSubmitting(true);
       await sendApplicationForm(submitData);
+      setIsSubmitted(true);
 
-      // Reset form or redirect after successful submission
+      // Reset form after 5 seconds
       setTimeout(() => {
-        // Reset form or redirect
+        setIsSubmitted(false);
+        setFormData({
+          loanPurpose: "",
+          loanAmount: "",
+          mainReason: "",
+          priority: "",
+          securityWilling: false,
+          firstName: "",
+          lastName: "",
+          dob: {
+            day: "",
+            month: "",
+            year: "",
+          },
+          citizenship: "",
+          incomeSource: "",
+          creditScore: "",
+          phone: "",
+          email: "",
+          address: {
+            unitNumber: "",
+            street: "",
+            suburb: "",
+            state: "",
+            postcode: "",
+          },
+          agreeTerms: false,
+          understandOffer: false,
+          security: "",
+          vehicleDetails: "",
+          assetDescription: "",
+          guarantorRelationship: "",
+        });
       }, 5000);
     } catch (error) {
       console.error("Error submitting application:", error);
@@ -215,7 +249,35 @@ const ApplyNow = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-8 text-gray-200">
+          <AnimatePresence mode="wait">
+            {isSubmitted ? (
+              <motion.div
+                key="success"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex flex-col items-center justify-center text-center p-6"
+              >
+                <div className="w-16 h-16 bg-green-500/15 border border-green-500/30 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Application Submitted!</h3>
+                <p className="text-gray-300 mb-8">Thank you for your application. Our team will review it and get back to you shortly.</p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="px-6 py-2 bg-secondary text-black rounded-lg hover:brightness-110 transition-colors duration-300"
+                >
+                  Submit Another Application
+                </button>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                onSubmit={handleSubmit}
+                className="p-8 text-gray-200"
+              >
             {/* Loan Details Section */}
             <div className="mb-10">
               <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
@@ -889,7 +951,9 @@ const ApplyNow = () => {
                 Your information is secure and encrypted
               </p>
             </div>
-          </form>
+              </motion.form>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </div>

@@ -57,19 +57,27 @@ const ApplyNow = () => {
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
 
+    let fieldValue;
+    if (type === "select-one") {
+      const selectedOption = e.target.options[e.target.selectedIndex];
+      fieldValue = selectedOption.text;
+    } else {
+      fieldValue = type === "checkbox" ? checked : value;
+    }
+
     if (name.includes(".")) {
       const [parent, child] = name.split(".");
       setFormData({
         ...formData,
         [parent]: {
           ...formData[parent],
-          [child]: value,
+          [child]: fieldValue,
         },
       });
     } else {
       setFormData({
         ...formData,
-        [name]: type === "checkbox" ? checked : value,
+        [name]: fieldValue,
       });
     }
   };

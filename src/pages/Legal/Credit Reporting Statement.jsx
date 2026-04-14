@@ -14,7 +14,7 @@ const CreditReportingStatement = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl"
+          className="mb-10 rounded-2xl border border-white/10 bg-black backdrop-blur-md overflow-hidden shadow-2xl"
         >
           <div className="grid md:grid-cols-2 gap-6 p-8">
             <div className="space-y-4">

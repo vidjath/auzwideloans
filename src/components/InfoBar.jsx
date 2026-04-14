@@ -16,7 +16,8 @@ const InfoBar = () => {
           }}
           className="text-center text-sm"
         >
-          Auzwide Loans Pty Ltd ACN 688-716-841, facilitating loans provided by Strawberry Loans Pty Ltd ACN 621 474 655 Australian Credit Licence Number 519253. AFCA's membership number: 119086.
+          Auzwide  Pty Ltd  ABN 71 688 716 841, Authorised Credit Representative Number 574043, Facilitating Loans Provided by Strawberry Loans Pty Ltd ABN 74 621 474 655, Australian Credit Licence 519 253.
+          {/*Auzwide Loans Pty Ltd ACN 688-716-841, facilitating loans provided by Strawberry Loans Pty Ltd ACN 621 474 655 Australian Credit Licence Number 519253. AFCA's membership number: 119086.*/}
         </motion.div>
       </div>
     </div>

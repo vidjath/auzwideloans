@@ -14,7 +14,7 @@ const ComplaintsManagementPolicy = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl"
+          className="mb-10 rounded-2xl border border-white/10 bg-black backdrop-blur-md overflow-hidden shadow-2xl"
         >
           <div className="grid md:grid-cols-2 gap-6 p-8">
             <div className="space-y-4">
@@ -109,7 +109,7 @@ const ComplaintsManagementPolicy = () => {
             <h2 className="text-3xl font-bold text-secondary">2. OUR COMPLAINTS MANAGEMENT PROCESS</h2>
           </div>
           <div className="space-y-6 pl-5 border-l-2 border-white/10">
-            <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 shadow-lg">
+            <div className="rounded-2xl border border-white/10 bg-black backdrop-blur-md p-6 shadow-lg">
               <p className="mb-4 text-gray-300 leading-relaxed">
                 <span className="inline-block w-8 font-semibold text-secondary">2.1</span>
                 We take your feedback seriously and will work proactively to investigate and resolve your 
@@ -140,7 +140,7 @@ const ComplaintsManagementPolicy = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-secondary/30 bg-secondary/10 backdrop-blur-md p-6 shadow-lg">
+            <div className="rounded-2xl border border-secondary/30 bg-black backdrop-blur-md p-6 shadow-lg">
               <p className="mb-4 text-gray-300 leading-relaxed">
                 <span className="inline-block w-8 font-semibold text-secondary">2.2</span>
                 <span className="font-medium text-white/90">Hardship or Postponement of Enforcement:</span>
@@ -160,7 +160,7 @@ const ComplaintsManagementPolicy = () => {
               </div>
             </div>
 
-            <p className="text-gray-300 leading-relaxed rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-4">
+            <p className="text-gray-300 leading-relaxed rounded-xl border border-white/10 bg-black backdrop-blur-md p-4">
               <span className="inline-block w-8 font-semibold text-secondary">2.3</span>
               Any material relating to Auzwide Loans's Internal Dispute Resolution ("IDR") process will 
               be provided to you free of charge.
@@ -187,7 +187,7 @@ const ComplaintsManagementPolicy = () => {
               </ul>
             </div>
 
-            <p className="text-gray-300 leading-relaxed rounded-xl border border-secondary/20 bg-secondary/5 backdrop-blur-md p-4">
+            <p className="text-gray-300 leading-relaxed rounded-xl border border-secondary/20 bg-black backdrop-blur-md p-4">
               <span className="inline-block w-8 font-semibold text-secondary">2.5</span>
               We will acknowledge your complaint, generally within <span className="font-semibold text-secondary">one (1) business day</span>, and give you the 
               contact details of the person responsible for dealing with your complaint.
@@ -202,11 +202,11 @@ const ComplaintsManagementPolicy = () => {
                 provide you with information about:
               </p>
               <ul className="space-y-3 ml-8">
-                <li className="flex items-start bg-white/5 border border-white/10 p-3 rounded-lg">
+                <li className="flex items-start bg-black border border-white/10 p-3 rounded-lg">
                   <span className="inline-block w-8 font-semibold text-gray-400">(a)</span>
                   <span className="flex-1">the final outcome of your complaint at IDR; and</span>
                 </li>
-                <li className="flex items-start bg-white/5 border border-white/10 p-3 rounded-lg">
+                <li className="flex items-start bg-black border border-white/10 p-3 rounded-lg">
                   <span className="inline-block w-8 font-semibold text-gray-400">(b)</span>
                   <span className="flex-1">your right to take the complaint to the Australian Financial Complaints Authority ("AFCA") 
                   if you are not satisfied with the IDR response and how to contact AFCA.</span>
@@ -273,7 +273,7 @@ const ComplaintsManagementPolicy = () => {
             </p>
 
             {/* Timeframe Table */}
-            <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-lg mt-6">
+            <div className="overflow-x-auto rounded-2xl border border-white/10 bg-black backdrop-blur-md shadow-lg mt-6">
               <table className="min-w-full">
                 <thead className="bg-secondary/20 border-b border-white/10">
                   <tr>
@@ -282,11 +282,11 @@ const ComplaintsManagementPolicy = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-white/10 hover:bg-white/5 transition-colors">
+                  <tr className="border-b border-white/10 hover:bg-black transition-colors">
                     <td className="border-r border-white/10 px-6 py-4 text-gray-300">Complaints involving default notices</td>
                     <td className="px-6 py-4 text-gray-300">No later than <span className="text-secondary font-semibold">twenty-one (21) calendar days</span> after receiving the complaint.</td>
                   </tr>
-                  <tr className="border-b border-white/10 hover:bg-white/5 transition-colors">
+                  <tr className="border-b border-white/10 hover:bg-black transition-colors">
                     <td className="border-r border-white/10 px-6 py-4 text-gray-300">
                       Complaints involving applications for hardship notices or a request for postponement of 
                       enforcements proceedings made.
@@ -299,7 +299,7 @@ const ComplaintsManagementPolicy = () => {
                       </span>
                     </td>
                   </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
+                  <tr className="hover:bg-black transition-colors">
                     <td className="border-r border-white/10 px-6 py-4 text-gray-300">All other complaints</td>
                     <td className="px-6 py-4 text-gray-300">No later than <span className="text-secondary font-semibold">thirty (30) calendar days</span> after receiving the complaint.</td>
                   </tr>
@@ -332,7 +332,7 @@ const ComplaintsManagementPolicy = () => {
                 <span className="inline-block w-8 font-semibold text-secondary">4.2</span>
                 You can lodge your complaint with AFCA by sending the relevant information and documents to:
               </p>
-              <div className="ml-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 space-y-2 shadow-lg">
+              <div className="ml-8 rounded-2xl border border-white/10 bg-black backdrop-blur-md p-6 space-y-2 shadow-lg">
                 <p className="font-semibold text-white text-lg">Australian Financial Complaints Authority Limited</p>
                 <p className="text-gray-300">GPO Box 3</p>
                 <p className="text-gray-300">Melbourne VIC 3001</p>

@@ -13,6 +13,7 @@ import ComplaintsManagementPolicy from './pages/Legal/Complaints Management Poli
 import CreditReportingStatement from './pages/Legal/Credit Reporting Statement';
 import PrivacyStatement from './pages/Legal/PrivacyStatement';
 import TargetMarket from './pages/Legal/TargetMarketDetermination';
+import CreditGuides from './pages/Legal/creditGuides'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/legal/credit-information" element={<CreditReportingStatement />} />
           <Route path="/legal/website-privacy" element={<PrivacyStatement />} />
           <Route path="/legal/target-market" element={<TargetMarket />} />
+          <Route path="/legal/credit-guides" element={<CreditGuides />} />
         </Routes>
       </motion.main>
       <Footer />

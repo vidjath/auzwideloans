@@ -908,7 +908,7 @@ const ApplyNow = () => {
                     </a>{" "}
                     and{" "}
                     <a
-                      href="/privacy-policy"
+                      href="/legal/website-privacy"
                       className="text-secondary underline hover:brightness-125"
                     >
                       Privacy Policy

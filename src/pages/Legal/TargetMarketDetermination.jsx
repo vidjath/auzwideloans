@@ -14,7 +14,7 @@ const TargetMarket = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl"
+          className="mb-10 rounded-2xl border border-white/10 bg-black backdrop-blur-md overflow-hidden shadow-2xl"
         >
           <div className="p-8 text-center space-y-2">
             <p className="font-bold text-white text-lg">STRAWBERRY LOANS PTY LTD</p>
@@ -158,7 +158,7 @@ const TargetMarket = () => {
           
           <div className="pl-5 border-l-2 border-white/10 space-y-6">
             {/* Consumer's Likely Objectives */}
-            <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6">
+            <div className="rounded-xl border border-white/10 bg-black backdrop-blur-md p-6">
               <h4 className="text-lg font-semibold text-white mb-3">Consumer's Likely Objectives</h4>
               <ul className="space-y-2">
                 {[
@@ -185,7 +185,7 @@ const TargetMarket = () => {
             </div>
 
             {/* Consumer's Likely Financial Situation */}
-            <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6">
+            <div className="rounded-xl border border-white/10 bg-black backdrop-blur-md p-6">
               <h4 className="text-lg font-semibold text-white mb-3">Consumers Likely Financial Situation</h4>
               <ul className="space-y-2">
                 {[
@@ -208,7 +208,7 @@ const TargetMarket = () => {
             </div>
 
             {/* Consumer's Likely Needs */}
-            <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6">
+            <div className="rounded-xl border border-white/10 bg-black backdrop-blur-md p-6">
               <h4 className="text-lg font-semibold text-white mb-3">Consumer's Likely Needs</h4>
               <p className="leading-relaxed">Seeking a loan of between $2,001 and $5,000 (plus establishment fee of $400 if applicable) to purchase an asset or other goods and services, or to consolidate other debts/bills, pay for car repairs, holidays, weddings, funerals, education, renovations and spread repayments over a relatively short term.</p>
             </div>

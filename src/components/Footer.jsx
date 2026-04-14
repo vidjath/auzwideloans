@@ -73,6 +73,11 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
+                  <a href="/legal/credit-guides" className="text-gray-400 hover:text-secondary transition duration-300">
+                    Credit Guides
+                  </a>
+                </li>
+                <li>
                   <a href="/legal/privacy-and-credit" className="text-gray-400 hover:text-secondary transition duration-300">
                     Complaints Management Policy
                   </a>

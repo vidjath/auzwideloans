@@ -11,7 +11,7 @@ const PrivacyStatement = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl"
+          className="mb-10 rounded-2xl bg-black border border-white/10 backdrop-blur-md overflow-hidden shadow-2xl"
         >
           <div className="grid md:grid-cols-2 gap-6 p-8">
             <div className="space-y-4">
@@ -759,11 +759,11 @@ const PrivacyStatement = () => {
               <h3 className="text-xl font-semibold text-white mb-4">20. COMPLAINTS</h3>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  <span className="inline-block w-8 font-semibold text-secondary">20.1</span>
+                  <span className="inline-block w-8 font-semibold text-secondary">20.1</span>{' '}
                   We offer a free internal complaint resolution scheme to all of our customers. Should you have a privacy complaint, please contact us to discuss your concerns. Our contact details set out as per clause 21 below.
                 </p>
                 <p>
-                  <span className="inline-block w-8 font-semibold text-secondary">20.2</span>
+                  <span className="inline-block w-8 font-semibold text-secondary">20.2</span>{' '}
                   To assist us in helping you, we ask you to follow a simple three-step process:
                 </p>
                 <ul className="space-y-2 ml-8">
@@ -779,21 +779,21 @@ const PrivacyStatement = () => {
                   ))}
                 </ul>
                 <p>
-                  <span className="inline-block w-8 font-semibold text-secondary">20.3</span>
+                  <span className="inline-block w-8 font-semibold text-secondary">20.3</span>{' '}
                   We rectify any breach if the complaint is justified and take necessary steps to resolve the issue.
                 </p>
                 <p>
-                  <span className="inline-block w-8 font-semibold text-secondary">20.4</span>
+                  <span className="inline-block w-8 font-semibold text-secondary">20.4</span>{' '}
                   In certain situations, to deal with a complaint it may be necessary to consult with third parties. However, please note any disclosure of Personal Information to third parties is provided with your authority and consent.
                 </p>
                 <p>
-                  <span className="inline-block w-8 font-semibold text-secondary">20.5</span>
+                  <span className="inline-block w-8 font-semibold text-secondary">20.5</span>{' '}
                   After a complaint has been received, we send you a written notice of acknowledgement setting out the process. The complaint is investigated, and the decision is sent to you within thirty (30) days unless you have agreed to a longer time. If a complaint cannot be resolved within the agreed time frame or a decision could not be made within thirty (30) days of receipt, a notification is sent out to you setting out the reasons and specifying a new date when you can expect a decision or resolution.
                 </p>
-                <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 space-y-2">
+                <div className="rounded-2xl border border-white/10 bg-black backdrop-blur-md p-6 space-y-2">
                   <p>
-                    <span className="inline-block w-8 font-semibold text-secondary">20.6</span>
-                    If you are not satisfied with our internal privacy practices or the outcome in respect to complaint, you may approach the OAIC with your complaint:
+                    <span className="inline-block w-8 font-semibold text-secondary">20.6</span>{' '}
+                      If you are not satisfied with our internal privacy practices or the outcome in respect to complaint, you may approach the OAIC with your complaint:
                   </p>
                   <div className="ml-8 space-y-1">
                     <p className="font-semibold text-white">Office of the Australian Information Commissioner</p>
